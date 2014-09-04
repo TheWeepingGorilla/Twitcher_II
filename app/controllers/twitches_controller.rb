@@ -1,9 +1,10 @@
 class TwitchesController < ApplicationController
 
-  before_filter :authenticate_user!, except: [:index]
+  before_filter :authenticate_user!
 
   def index
-    @twitches = Twitch.all
+    @user = User.find(params[:user_id])
+    @twitches = @user.twitches
   end
 
   def new

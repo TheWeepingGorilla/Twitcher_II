@@ -1,2 +1,8 @@
+<h1>Welcome to Twitcher - Your Source for Narcissistic Distraction </h1>
+<ul id="links">
+  <%= render @twitches %>
+</ul>
+<br>
+<%= link_to "New Twitch", new_twitch_path, :class=> "btn btn-success", id: "add_twitch", remote: true %>
 
 <%= params.inspect %>
