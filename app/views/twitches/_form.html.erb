@@ -1,0 +1,19 @@
+<% if @twitch.errors.any? %>
+  <h3>Please fix these errors:</h3>
+  <ul>
+    <% @twitch.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @twitch, remote: true do |f| %>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+  </div>
+  <div class="form-group">
+    <%= f.hidden_field :user_id, :value => @user.id %>
+  </div>
+  <%= f.submit(:class => "btn btn-danger") %>
+<% end %>

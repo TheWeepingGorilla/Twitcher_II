@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
 
-    twitches_path(:user_id => current_user.id)
+    twitches_path
   end
 
   def after_sign_out_path_for(resource)
