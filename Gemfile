@@ -30,6 +30,8 @@ gem 'autoprefixer-rails'
 
 gem 'devise'
 
+gem 'textacular', '~> 3.0'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
