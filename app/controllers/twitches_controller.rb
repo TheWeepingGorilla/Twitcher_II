@@ -5,6 +5,7 @@ class TwitchesController < ApplicationController
   def index
     @user = current_user
     @twitches = @user.twitches
+    @mentions = @user.mentions
   end
 
   def new

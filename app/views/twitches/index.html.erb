@@ -1,8 +1,24 @@
 <h1>Welcome to Twitcher - Your Source for Narcissistic Distraction </h1>
+<h3>My Twitches</h3>
 <ul id="twitches">
   <%= render @twitches %>
 </ul>
 <br>
 <%= link_to "New Twitch", new_twitch_path, :class=> "btn btn-success", id: "add_twitch", remote: true %>
+<br>
+<h3>Twitches That Mention Me</h3>
+
+<br>
+<ul id="mentions">
+  <%= render partial:"mention" %>
+</ul>
+<br>
+
+
+
+
+
+
+
 
 

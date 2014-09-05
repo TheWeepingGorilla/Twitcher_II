@@ -1,4 +1,3 @@
 <li><%= "#{twitch.content}" %>
-        <%= link_to "Edit",edit_twitch_path(twitch) %>
         <%= link_to "Delete", twitch_path(twitch), :data => {:confirm => "You sure?", :method => "delete"} %>
     </li>
