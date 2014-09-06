@@ -1,0 +1,3 @@
+<li><%= "#{follower.user_id}" %>
+        <%= link_to "Delete", follower_path(follower), :data => {:confirm => "You sure?", :method => "delete"} %>
+    </li>

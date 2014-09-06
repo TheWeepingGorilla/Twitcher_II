@@ -7,18 +7,16 @@
 <%= link_to "New Twitch", new_twitch_path, :class=> "btn btn-success", id: "add_twitch", remote: true %>
 <br>
 <h3>Twitches That Mention Me</h3>
-
 <br>
 <ul id="mentions">
   <%= render partial:"mention" %>
 </ul>
 <br>
+<%= link_to "Follow Someone", new_follower_path, :class=> "btn btn-success", id: "follow_someone", remote: true %>
+</br>
+<h3>Who I'm Following</h3>
+<ul id="followers">
 
-
-
-
-
-
-
+</ul>
 
 
