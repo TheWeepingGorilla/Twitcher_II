@@ -5,12 +5,12 @@ class FollowersController < ApplicationController
   def new
     @follower = Follower.new
     @user = current_user
+    @users = User.all
   end
 
   def create
     @follower = Follower.new(follower_params)
     if @follower.save
-      flash[:notice] = "Sycophantic relationship with #{params[:user_id]} created."
       respond_to do |format|
         format.html { redirect_to twitches_path }
         format.js
@@ -18,6 +18,12 @@ class FollowersController < ApplicationController
     else
       render 'new'
     end
+  end
+
+def destroy
+    @follower = Follower.find(params[:id])
+    @follower.destroy
+    redirect_to twitches_path
   end
 
 private

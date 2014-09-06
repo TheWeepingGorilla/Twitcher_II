@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :twitches
+  has_many :followers
 
   after_create :send_welcome_email
 

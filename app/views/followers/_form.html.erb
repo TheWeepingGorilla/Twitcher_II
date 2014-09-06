@@ -1,18 +1,22 @@
-<% if @follow.errors.any? %>
+<% if @follower.errors.any? %>
   <h3>Please fix these errors:</h3>
   <ul>
-    <% @follow.errors.full_messages.each do |message| %>
+    <% @follower.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
   </ul>
 <% end %>
 
-<%= form_for @follow, remote: true do |f| %>
+<%= form_for @follower, remote: true do |f| %>
   <div class="form-group">
-    <%= f.select(:user_id, @user_options) %>
+    <%= f.collection_select :user_id, @users, :id, :email, include_blank: true %>
   </div>
   <div class="form-group">
     <%= f.hidden_field :follower_id, :value => @user.id %>
   </div>
   <%= f.submit(:class => "btn btn-danger") %>
 <% end %>
+
+
+
+
