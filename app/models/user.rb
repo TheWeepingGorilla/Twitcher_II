@@ -36,12 +36,4 @@ class User < ActiveRecord::Base
 end
 
 
-# User.all.each do |user|
-#       user.twitches.each do |twitch|
-#         if twitch.basic_search(self.email)
-#           results[user.id] = twitch
-#         end
-#       end
-#     end
 
-# if my_string.include? "cde"
